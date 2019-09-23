@@ -25,7 +25,7 @@ function botnPress() {
   score--;         // Increase the score
   scr.edit(score); // Update the page with the new score
   if(score > 10) {
-    var button = new Button('Build a House', btnPress); 
+    var button = new Button('Build a House', btnPress);
   }
   if(score > 100) {
     hidden.hide(500);
