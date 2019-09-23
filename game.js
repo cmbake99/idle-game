@@ -2,9 +2,10 @@ var score = 1; // Create a variable to store the score in
 
 
 var title = new Title('Hero Risen'); // Create a title element
-var button = new Button('Gather Wood', btnPress);   // Create a button element
+var button = new Button('Gather Wood', btnPress);
+var button = new Button('memes', bootnPress);  // Create a button element
 var hidden = new Button('Boo!', botnPress);
-var button = new Button('memes', bootnPress);
+
 hidden.hide();
 var scr = new Text(score);                    // Create a text element
 
