@@ -33,7 +33,7 @@ function btnPress() {
   scr.edit(score); // Update the page with the new score
   if(score > 100) {
     button2.show();
-    stoneLoop = setInterval(looper, 1000);
+    var stoneLoop = setInterval(looper, 1000);
   }
 
 }
@@ -71,7 +71,8 @@ function btnPress2() {
 }
 
 function looper() {
-  score++;
+  score2++;       // Increase the score
+  scr2.edit(score2);
 }
 
 var text1 = new Text('Actions');  // Create some text to go in the columns
