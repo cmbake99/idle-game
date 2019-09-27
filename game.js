@@ -2,7 +2,7 @@ var score = 1; // Create a variable to store the score in
 var score2 = 1;
 var score3 = 1;
 var score4 = 1;
-var stoneLoop;
+
 
 var title = new Title('Hero Risen'); // Create a title element
 var button = new Button('Gather Wood', btnPress);
@@ -12,7 +12,7 @@ var button3 = new Button('Gather Coal', bootnPress);
 button3.hide();
 var button4 = new Button('Gather Iron', boootnPress);
 button4.hide();
-var button5 = new Button('Build a House', btnPress2);
+var button5 = new Button('Build a House', btnPress2); //I had this planned, but never got the time to do it.
 button5.hide();
 var emptyText = new Text('');
 var emptyText2 = new Text('');
@@ -22,8 +22,11 @@ var scr2 = new Text(score2);
 var scr3 = new Text(score3);
 var scr4 = new Text(score4);
 
-var loop = setInterval(btnPress, 1000);   // Set up a loop
-
+var loop = setInterval(btnPress, 1000);
+var loop2 = setInterval(botnPress, 1000);
+var loop3 = setInterval(bootnPress, 1000);
+var loop4 = setInterval(boootnPress, 1000);   // Set up a loop
+var stoneLoop = false
 function stopLoop() {
   clearInterval(loop);
 }
@@ -31,11 +34,11 @@ function stopLoop() {
 function btnPress() {
   score++;         // Increase the score
   scr.edit(score); // Update the page with the new score
-  if(score > 100) {
+  if(score > 100 && stoneLoop == false) {
     button2.show();
-    var stoneLoop = setInterval(looper, 1000);
+    setInterval(1000);
+    stoneLoop = true
   }
-
 }
 function botnPress() {
   score2++;         // Increase the score
@@ -69,11 +72,11 @@ function btnPress2() {
     //setInterval(bootnPress, 10000);
   }
 }
-
-function looper() {
-  score2++;       // Increase the score
+function stoneLoop() {
+  score2++;         // Increase the score
   scr2.edit(score2);
 }
+
 
 var text1 = new Text('Actions');  // Create some text to go in the columns
 var text2 = new Text('Resources');
